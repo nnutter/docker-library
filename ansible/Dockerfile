@@ -21,5 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 COPY requirements.txt /tmp/
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
+COPY ssh_config /etc/ssh/
+
 COPY USAGE.md /var/cache/
 CMD ["/bin/cat", "/var/cache/USAGE.md"]
