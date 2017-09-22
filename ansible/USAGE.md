@@ -24,4 +24,4 @@ something arbitrary and authenticate to Kereberos,
     # docker run --rm --interactive --tty \
                  --volume "$KRB5CONF":/etc/krb5.conf \
                  --volume "$KRB5CCNAME":/tmp/krb5cc \
-                 ansible /bin/bash
+                 registry.gsc.wustl.edu/nnutter/ansible /bin/bash
