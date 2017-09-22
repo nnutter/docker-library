@@ -1,4 +1,6 @@
-FROM python:2-onbuild
+FROM python:2
+
+ENV KRB5CCNAME=/tmp/krb5cc
 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
@@ -15,3 +17,9 @@ RUN export DEBIAN_FRONTEND=noninteractive \
         sssd-ldap \
         sssd-proxy \
     && apt-get clean
+
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY USAGE.md /var/cache/
+CMD ["/bin/cat", "/var/cache/USAGE.md"]
