@@ -16,6 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
         sssd-krb5-common \
         sssd-ldap \
         sssd-proxy \
+        vim-nox \
     && apt-get clean
 
 COPY requirements.txt /tmp/
