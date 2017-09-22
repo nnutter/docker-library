@@ -22,6 +22,8 @@ COPY requirements.txt /tmp/
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY ssh_config /etc/ssh/
+RUN mkdir /etc/ansible
+COPY ansible.cfg /etc/ansible/
 
 COPY USAGE.md /var/cache/
 CMD ["/bin/cat", "/var/cache/USAGE.md"]
