@@ -28,3 +28,5 @@ COPY ansible.cfg /etc/ansible/
 
 COPY USAGE.md /var/cache/
 CMD ["/bin/cat", "/var/cache/USAGE.md"]
+
+WORKDIR /ansible
