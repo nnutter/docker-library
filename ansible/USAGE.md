@@ -4,7 +4,7 @@ Usage: docker run --rm --interactive --tty \
                   ansible /bin/bash
 
 Note that if you are on macOS you need to use `/private/etc` instead of `/etc`
-because _Docker for Mac_ doesn't whitelist `/etc` by default for "seemless
+because _Docker for Mac_ doesn't whitelist `/etc` by default for "seamless
 volume binding".
 
 You should set `KRB5CONF` to the path to your `krb5.conf`, e.g.
